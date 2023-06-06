@@ -1,0 +1,19 @@
+Logistic regression involves fitting a curve to numeric data to make predictions about binary events. Arguably one of the most widely used machine learning methods, this chapter will provide an overview of the technique while illustrating how to apply it to fundraising data.
+
+1. **Making binary predictions with regression**
+If you've spent any time at all studying data science, you are likely to have encountered regression analysis, which is a branch of statistics interested in modeling numeric relationships within data. Regression methods are perhaps the single most common form of machine learning. The technique can be adapted to virtually any type of problem in any domain. In this video, you'll see how regression methods can be used to classify a binary outcome. Later, you'll use what you learn to predict whether or not someone will donate to charity a topic directly related to my own work as a fund-raising data scientist.
+
+2. **Introducing linear regression**
+In its most basic form, regression involves predicting an outcome y using one or more predictors, labeled as x variables. The y variable is known as the dependent variable, as it seems to depend upon the x's. Suppose you have a numeric y which you plot versus a numeric x term, resulting in the figure seen here. The y might reflect something like income or life expectancy, while the x-axis could represent age or education. Linear regression involves fitting the straight line to this data that best captures the relationship between the x and y terms.
+
+3. **Regression for binary classification**
+Suppose you have a binary y outcome instead something that can take only '1' or '0' values, like "donate" or "not donate." Constructing a plot of y versus x, the points fall in two flat rows rather than spread along the diagonal. You can still apply a straight line to the data, but this doesn't seem to fit very well. Additionally, for some values of x, the model will predict values less than 0 or greater than 1. This is obviously not ideal.
+
+4. **Introducing logistic regression**
+Now imagine the same binary outcome, but rather than trying to model it with a straight line, we use a curve instead. This is the idea behind logistic regression. A type of S-shaped curve called a logistic function has the property that for any input value of x, the output is always between 0 and 1 just like a probability. The greater this probability, the more likely the outcome is to be the one labeled '1'.
+
+5. **Making predictions with logistic regression**
+In R, logistic regression uses the glm function with the syntax as shown here. First, the terms y, x1, x2, and x3 specify the dependent and independent variables that will go into your model. This is called the R formula interface, and is a way to define the model's form. You will replace the y and x terms with the outcome and predictors needed for your analysis. The family parameter specifies the type of model you are building, because GLM can be be used to do many different types of regression. In this case, family = "binomial" tells R to perform logistic regression. Once the model has been built, it can be used to estimate probabilities. Supplying the type = "response" parameter to the predict function produces the predicted probabilities which are easier to interpret than the default log-odds values. To make predictions, the probabilities must be converted into the outcome of interest using an ifelse step. This if/else predicts '1' if the predicted probability is greater than 50%, and '0' otherwise. Sometimes you may need to set this threshold higher or lower to make the model more or less aggressive.
+
+6. **Let's practice!**
+Though this may seem confusing at first, you'll have an opportunity to practice building logistic regression models and making predictions in the coming exercises.
