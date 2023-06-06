@@ -1,0 +1,17 @@
+1. **Understanding NB's "naivety"**
+In the previous exercises, you built a simple Naive Bayes model that used historic location data to predict my future location. To build a more sophisticated model, you might add additional data points to help inform the estimated probability of my location. But until now, we've only considered conditional probability when a single event predicts another. Adding more predictors complicates matters and is the reason why this method is called "naive." Keep listening to find out why.
+
+2. **The challenge of multiple predictors**
+With a single predictor, conditional probability is based on the overlap between the two events, as the Venn diagram here illustrates. When we start adding more events, the Venn diagram can start to look a bit messy. Here it is with three events, imagine it with dozens or more! And, as confusing as this looks to us, for a number of reasons it also becomes more inefficient for a computer to calculate the overlap.
+
+3. **A "naive" simplification**
+Instead, the Naive Bayes algorithm uses a shortcut to approximate the conditional probability we hope to compute. Rather than treating the problem as the intersection of all of the related events, the algorithm makes a so-called "naive" assumption about the data. Specifically, it assumes that the events are independent. When events are independent, the joint probability can be computed by multiplying the individual probabilities. Therefore, under the naive assumption, the algorithm does not need to observe all of the possible intersections in the full Venn diagram. Instead, it simply multiplies the probabilities from a series of much simpler intersections. Researchers have found that although the naive assumption is rarely true in practice, the Naive Bayes model still performs admirably on many real-world tasks. So there's little need to worry about a potential downside.
+
+4. **An "infrequent" problem**
+There is one other potential issue to be aware of when building a Naive Bayes model. Suppose you have a set of predictors, chained together under the naive assumption. Suppose further that one of those events has never been observed previously in combination with the outcome. For instance, I may never have gone into work on a weekend. I may do this someday in the future, I just haven't done so before. In this case, the Venn diagram for work and weekend has no overlap; the joint probability of these two events is zero. And whenever zero is multiplied in a chain, the entire sequence becomes zero. For this reason, the weekend event seems to have "veto" power over the entire prediction. No matter how overwhelming the rest of the evidence, any predicted probability of work on a weekend will always be zero.
+
+5. **The Laplace correction**
+The solution to this problem involves adding a small number, usually '1', to each event and outcome combination to eliminate this veto power. This is called the Laplace correction or Laplace estimator. After adding this correction, each Venn diagram now has at least a small bit of overlap; there is no longer any joint probability of zero. As a result, there will be at least some predicted probability for every future outcome even if it has never been seen before.
+
+6. **Let's practice!**
+The Naive Bayes function you've used so far will let you set the Laplace parameter; you'll see its impact in the coming exercises as you build a more sophisticated location model.

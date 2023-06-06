@@ -1,3 +1,5 @@
+As the kNN algorithm literally "learns by example" it is a case in point for starting to understand supervised machine learning. This chapter will introduce classification while working through the application of kNN to self-driving vehicle road sign recognition.
+
 1. **Classification with nearest neighbors**
 Hi! My name is Brett Lantz and I'm a data scientist at the University of Michigan and the author of the book "Machine Learning with R." Machine learning utilizes computers to turn data into insight and action. This course focuses on a subset of machine learning. The sub-domain called supervised learning focuses on training a machine to learn from prior examples. When the concept to be learned is a set of categories, the task is called classification. From identifying diseases, predicting the weather, or detecting whether an image contains a cat, classification tasks are diverse yet common. In this course, you'll learn classification methods while exploring four real-world applications. Let's get started!
 
