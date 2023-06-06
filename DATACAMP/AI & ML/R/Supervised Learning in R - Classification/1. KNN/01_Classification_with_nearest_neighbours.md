@@ -1,0 +1,18 @@
+1. **Classification with nearest neighbors**
+Hi! My name is Brett Lantz and I'm a data scientist at the University of Michigan and the author of the book "Machine Learning with R." Machine learning utilizes computers to turn data into insight and action. This course focuses on a subset of machine learning. The sub-domain called supervised learning focuses on training a machine to learn from prior examples. When the concept to be learned is a set of categories, the task is called classification. From identifying diseases, predicting the weather, or detecting whether an image contains a cat, classification tasks are diverse yet common. In this course, you'll learn classification methods while exploring four real-world applications. Let's get started!
+
+2. **Classification tasks for driverless cars**
+If your experiences on the road are anything like mine, self-driving cars can't get here soon enough! It's easy to imagine aspects of autonomous driving that involve classification; for example, when a vehicle's camera observes an object, it must classify the object before it can react. Though the algorithms that govern autonomous cars are sophisticated, we can simulate aspects of their behavior. In this example, we'll suppose the vehicle can see but not distinguish the roadway signs. Your job will be to use machine learning to classify the sign's type.
+
+3. **Understanding Nearest Neighbors**
+To start training a self-driving car, you might supervise it by demonstrating the desired behavior as it observes each type of sign. You stop at intersections, yield to pedestrians, and change speed as needed. After some time under your instruction, the vehicle has built a database that records the sign as well as the target behavior. The image here illustrates this dataset. I suspect you already see some similarities, the machine can too! A nearest neighbor classifier takes advantage of the fact that signs that look alike should be similar to, or "nearby" other signs of the same type. For example, if the car observes a sign that seems similar to those in the group of stop signs, the car will probably need to stop.
+
+4. **Measuring similarity with distance**
+So how does a nearest neighbor learner decide whether two signs are similar? It does so by literally measuring the distance between them. That's not to say that it measures the distance between signs in physical space, a stop sign in New York is the same as a stop sign in Los Angeles, but instead, it imagines the properties of the signs as coordinates in what is called a feature space. Consider, for instance, the sign's color. By imagining the color as a 3-dimensional feature space measuring levels of red, green, and blue, signs of similar color are located naturally close to one another. Once the feature space has been constructed in this way, you can measure distance using a formula like those you may have seen in a geometry class. Many nearest neighbor learners use the Euclidean distance formula here, which measures the straight-line distance between two points. If the formula is confusing, don't worry; R will compute it for you.
+
+5. **Applying nearest neighbors in R**
+An algorithm called k-Nearest Neighbors, or kNN, uses the principle of nearest neighbors to classify unlabeled examples. We'll get into the specifics later, but for now it suffices to know that, by default, R's knn function searches a dataset for the historic observation most similar to the newly-observed one. The knn function is part of the class package, and requires three parameters: first, the set of training data; second, the test data to be classified; and third, the labels for the training data.
+
+6. **Let's practice!**
+The test car is ready at the track. Can you help it drive away?
+
