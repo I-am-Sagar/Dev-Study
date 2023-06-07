@@ -1,0 +1,17 @@
+1. **Calculating sales and the cost of goods sold**
+Let's now look into the details of how to calculate sales and the cost of goods sold.
+
+2. **Calculating sales and the cost of goods sold**
+So we have had a look at both net profit and gross profit in the previous exercises. What is interesting to note, is that while most of the items contained within net profit are self-explanatory, we need to take a deeper look into the gross profit items. As we know, gross profit is made up of sales and cost of sales. In the next couple of exercises, we will be practicing how exactly these components are calculated.
+
+3. **Calculating sales**
+First, let's look at how we calculate sales. Do not be daunted by the multiple names, it all means the same thing. Sales equals income equals revenue equals turnover. For this course, we will mainly refer to it as sales. We need specific data in order to calculate sales. We need to know the sales price per unit, as well as the number of units sold. However, there are also some complexities, such as discounts, where we can offer products below the standard sales price; credit sales, where we do not receive all the income upfront; and the sales mix, where some units could be priced differently than others - Sales price 1 versus sales price 2. We will have a look at some examples in the exercises to come.
+
+4. **Calculating Cost of Goods Sold (COGS)**
+The next component is cost of goods sold or COGS. Calculating the cost of goods sold is a highly complex area, and we will only touch the basics in this course and cover key concepts and metrics to do financial forecasting. The data needed, in the simplest form, to calculate COGS is the total fixed costs, variable costs per unit, inventory opening balance, and the inventory closing balance. For this course, we will not focus on inventory movements between the opening and closing balance as this is a complex topic, but it is very important to know the differences between fixed and variable costs. Fixed costs are costs incurred to produce the product or service that will be incurred independently of the amount of units produced, while variable costs are only incurred if we actually produce the product. We will go through further examples to clarify this.
+
+5. **What does the gross profit tell us?**
+So what does the gross profit and the underlying components tell us? Gross profit allows us to see our product profit margin in a clear way, expressed as a percentage of sales. This is also known as the GP margin, gross profit margin. Gross profit, therefore, allows us to analyze the profitability of our core product. If we are not making a profit, then we need to look very carefully our process and even at the product itself to see whether it can be improved. The question to ask is, if your core product is not profitable, how will you pay for other expenses like admin and taxes or pay dividends? We can also use the information included in the gross profit to calculate our break-even point. The break-even point is the point at which total cost and total revenue are equal, in other words, the amount of units that need to be sold in order to just cover our costs. The formula is as follows: fixed costs divided by the calculated value of sales price minus variable costs.
+
+6. **Let's practice!**
+But enough theory, let's get some practice with the exercises!
