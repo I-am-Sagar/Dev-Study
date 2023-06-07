@@ -482,3 +482,5 @@ sns.relplot(data = melt_data, x="Year", y="value", col="company", kind="line",
 
 plt.show()
 ```
+
+<hr>
