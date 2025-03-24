@@ -1,20 +1,30 @@
-from utils.image_utils import load_image, preprocess_image
+from utils.image_utils import load_images_in_batch, preprocess_image
 from models.clip import CLIPModel
+from pathlib import Path
+import torch
 
 def main():
+    print("Loading Model...")
     clip_model = CLIPModel()
 
-    print("Loading Image...")
-    image = load_image('sample.jpg')
+    print("Loading Images...")
+    images = load_images_in_batch()
+    print(len(images), images[0])
 
-    print("Preprocessing Image...")
-    preprocessed_image = preprocess_image(image=image, clip_model=clip_model)
+    output_dir = Path(__file__).parent / 'outputs'
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    print("Computing embedding...")
-    image_embedding = clip_model.get_image_embedding(preprocessed_image=preprocessed_image)
+    print("Calculating Embeddings...")
+    for img_name, image in images:
+        print(f"Processing {img_name}...")
+        preprocessed_image = preprocess_image(image, clip_model)
+        image_embedding = clip_model.get_image_embedding(preprocessed_image)
 
-    print(f"Image embedding shape: {image_embedding.shape}")
-    print(f"First few values of embedding: {image_embedding[0, :5]}")
+        torch.save(image_embedding, output_dir / f'{img_name}_embedding.pt')
+        print(f"Saved embedding for {img_name}")
+
+    print("All embeddings saved.")
+
 
 
 if __name__ == "__main__":
